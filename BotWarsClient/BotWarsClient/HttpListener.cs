@@ -130,15 +130,8 @@ namespace BotWarsClient
             _listener.Start();
             while (true)
             {
-                try
-                {
-                    HttpListenerContext context = _listener.GetContext();
-                    Process(context);
-                }
-                catch (Exception ex)
-                {
-
-                }
+                HttpListenerContext context = _listener.GetContext();
+                Process(context);
             }
         }
 
